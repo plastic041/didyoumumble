@@ -161,7 +161,10 @@ export const Analyzer: React.FC = () => {
           >
             트위터 아카이브
           </Text>
-          의 tweets.js를 업로드하세요.
+          의 tweets.js를 업로드하세요.{" "}
+          <Text component="a" href="/trustme.jpg" c="blue" td="underline">
+            모든 데이터는 브라우저에서만 처리되고, 서버로 절대 보내지 않습니다.
+          </Text>
         </Text>
         <FileButton onChange={handleFileUpload}>
           {(props) => (
@@ -222,15 +225,15 @@ export const Analyzer: React.FC = () => {
             </Flex>
 
             <Text component="span" display="inline">
-              <Text component="span" fw="bold" fz="xl">
+              <Text component="span" fw="bold" fz="h2">
                 {analysis.tweetCount.toLocaleString()}
               </Text>
               {` `}개의 트윗 중 멘션은{` `}
-              <Text component="span" fw="bold" fz="xl">
+              <Text component="span" fw="bold" fz="h2">
                 {analysis.mentionCount.toLocaleString()}
               </Text>
               {` `}개로, 혼잣말 비율은{` `}
-              <Text component="span" fw="bold" fz="xl">
+              <Text component="span" fw="bold" fz="h2">
                 {(analysis.ratio * 100).toFixed(2)}%
               </Text>
               {` `}입니다.
